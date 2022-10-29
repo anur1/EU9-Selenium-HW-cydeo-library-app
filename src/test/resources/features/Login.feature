@@ -6,17 +6,19 @@ Feature: Library app login feature
   Background: Assuming   user is on the login page
     Given user is on the login page
 
-    @Librarian  @Employee   @task2
+    @Librarian  @Employee   @task3
     Scenario: Login as librarian
       When user enters librarian username
       And user enters librarian password
+      And user clicks sign in button
       Then user should see the dashboard
 
 
-    @Student @task3
+    @Student @task2
     Scenario: Login as student
       When user enters student username
       And user enters student password
+      And user clicks sign in button
       Then user should see the dashboard
 
 

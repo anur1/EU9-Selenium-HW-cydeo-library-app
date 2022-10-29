@@ -9,10 +9,10 @@ import org.junit.runner.RunWith;
         plugin = "json:target/cucumber.json",
         features = "src/test/resources/features",
         glue = "com/cydeo/library/step_definitions",
-        dryRun = false,
-        tags = "@task5",
+        dryRun = false, //for generating snippets enter 'true'
+        tags = "@task6",
         publish = false
-
 )
+
 public class CukesRunner {
 }

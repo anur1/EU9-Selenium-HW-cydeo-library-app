@@ -5,10 +5,12 @@ Feature: Library app login feature
 
   Background: Assuming   user is on the login page
     Given user is on the login page
-    When user enters username "librarian1@library" and password "qU9mrvur"
+    When user enters username "librarian1@library" and password "rs4BNN9G"
+    And user clicks sign in button
+
 
   @task5
-  Scenario: Login as librarian in the same line
+  Scenario: Verify table name of columns is correct
     When user clicks on "Users" link
     Then table should have the following column names:
       | Actions   |
