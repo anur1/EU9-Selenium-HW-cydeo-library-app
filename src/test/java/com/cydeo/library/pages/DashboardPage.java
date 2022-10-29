@@ -26,9 +26,10 @@ public class DashboardPage {
     public WebElement logoutButton;
     //a[@id='navbarDropdown']/span
 
-    @FindBy (xpath = "//a/img/following-sibling::span")
+    @FindBy (xpath = "//a[@id='navbarDropdown']/span")
     public WebElement accountName;
     //a[@id='navbarDropdown']/span
+    //a/img/following-sibling::span
 
     @FindBy (xpath = "//h2[@id='user_count']")
     public WebElement userCount;

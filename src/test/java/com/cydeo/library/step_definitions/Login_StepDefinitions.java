@@ -151,7 +151,21 @@ public class Login_StepDefinitions {
     }
     @Then("user should see his-her account name {string}")
     public void user_should_see_his_her_account_name(String string) throws InterruptedException {
-        System.out.println("account name = " );
+
+
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
+        wait.until(ExpectedConditions.visibilityOf(dashboardPage.accountName));
+
+        Assert.assertEquals(string, dashboardPage.accountName.getText());
+
+
+
+
+      //Sign out if hooks are not used
+        Thread.sleep(2000);
+
+        System.out.println();
+        System.out.println("account name = " + dashboardPage.accountName.getText());
         Thread.sleep(1000);
 
         dashboardPage.profileNameDropdown.click();
